@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AndroidAppEncoding.Views.MainPage" Title="Viginette">
+    <ContentPage.Content>
+        <StackLayout x:Name="Stack">
+            <Grid Margin="20">
+                <Frame  Padding="10"
+                    BorderColor="#570dff"
+                    HasShadow="False">
+                    <Editor  Placeholder="Enter here" AutoSize="TextChanges" x:Name="InputEditor"/>
+                </Frame>
+                <Label  Text=" Input "
+            FontSize="15"
+            TextColor="#570dff"
+            BackgroundColor="white"
+            HorizontalOptions="CenterAndExpand"
+            VerticalOptions="Start"
+            Margin="0,-10,0,0"/>
+            </Grid>
+            <Grid Margin="20">
+                <Frame  Padding="10"
+                    BorderColor="#570dff"
+                    HasShadow="False">
+                    <Editor Placeholder="Enter code word here (cyrillic only)" AutoSize="TextChanges"  x:Name="CodewordEditor"/>
+                </Frame>
+                <Label  Text=" Word "
+            FontSize="15"
+            TextColor="#570dff"
+            BackgroundColor="white"
+            HorizontalOptions="CenterAndExpand"
+            VerticalOptions="Start"
+            Margin="0,-10,0,0"/>
+            </Grid>
+            <Grid Padding="20"
+                ColumnDefinitions="Auto, Auto,Auto"
+                RowDefinitions="Auto,Auto">
+                <Button Text="Cipher" Grid.Row="1"  x:Name="CipherButton"
+                        Clicked = "CipherButton_Clicked"
+                    Grid.Column="0"
+                    BackgroundColor="#4b0082"
+                    FontAttributes="Bold"
+                    FontSize="16"
+                    HeightRequest="50"
+                    TextColor="White"
+                    HorizontalOptions="StartAndExpand"
+                    WidthRequest="170" />
+
+                <Button Text="Decipher" BackgroundColor="#4b0082" x:Name="DecipherButton"
+                        Clicked="DecipherButton_Clicked"
+                    Grid.Row="1"
+                    Grid.Column="3"
+                    FontAttributes="Bold"
+                    FontSize="16"
+                    HeightRequest="50"
+                    HorizontalOptions="EndAndExpand"
+                    TextColor="White"
+                    WidthRequest="170" />
+
+            </Grid>
+            <Grid Margin="20">
+                <Frame  Padding="10"
+            BorderColor="#570dff"
+            HasShadow="False">
+                    <Label IsEnabled="True" x:Name="OutputEditor" FontSize="20" TextColor="Black"/>
+                </Frame>
+                <Label  Text=" Output "
+            FontSize="15"
+            TextColor="#570dff"
+            BackgroundColor="white"
+            HorizontalOptions="CenterAndExpand"
+            VerticalOptions="Start"
+            Margin="0,-10,0,0"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>
